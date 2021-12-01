@@ -28,3 +28,26 @@ $button-pressed-background: #0FC7FF;
   }
 }
 
+
+.button-group {
+  .radio {
+    position: relative;
+    display: inline-block;
+    input {
+      opacity: 0;
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      &:focus + label {
+        outline: solid 1px #272c3f;
+      }
+      &:checked + label {
+        @extend .button-pressed;
+      }
+    }
+    label {
+      display: block;
+    }
+  }
+}
+
